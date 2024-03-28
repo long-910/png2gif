@@ -1,4 +1,5 @@
 # PNG to GIF Converter
+[![Python package](https://github.com/long-910/png2gif/actions/workflows/python-package.yml/badge.svg)](https://github.com/long-910/png2gif/actions/workflows/python-package.yml)
 
 This Python script converts a series of PNG images into a GIF animation.
 
