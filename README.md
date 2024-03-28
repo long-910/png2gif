@@ -24,7 +24,7 @@ pip install .
 After installation, you can use the command line interface (CLI) to convert PNG images to GIF.
 
 ```bash
-png_to_gif_converter input_path output_filename --frame_rate 10
+png2gif input_path output_filename --frame_rate 10
 ```
 
 - `input_path`: Path to the directory containing PNG images.
@@ -36,7 +36,7 @@ png_to_gif_converter input_path output_filename --frame_rate 10
 You can also execute the package directly without installation:
 
 ```bash
-python -m png_to_gif_converter input_path output_filename --frame_rate 10
+python -m png2gif input_path output_filename --frame_rate 10
 ```
 
 ### Module Usage
@@ -44,7 +44,7 @@ python -m png_to_gif_converter input_path output_filename --frame_rate 10
 If you prefer to use the package as a module in your Python code:
 
 ```python
-from png_to_gif_converter import create_gif
+from png2gif import create_gif
 
 input_path = "path/to/input_directory"
 output_filename = "output.gif"

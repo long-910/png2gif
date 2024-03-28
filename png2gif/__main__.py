@@ -1,5 +1,5 @@
 import argparse
-from png_to_gif_converter.converter import create_gif
+from png2gif.converter import create_gif
 
 
 def main():
