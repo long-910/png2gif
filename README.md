@@ -25,6 +25,10 @@ python png_to_gif_converter.py images/ --output_filename animation.gif --frame_r
 
 This command will convert all PNG images in the `images/` directory into a GIF animation named `animation.gif` with a frame rate of 15 FPS.
 
+## Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bug fixes, feature requests, or general improvements.
+
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
