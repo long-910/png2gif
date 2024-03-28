@@ -1,4 +1,5 @@
 # PNG to GIF Converter
+
 [![Python package](https://github.com/long-910/png2gif/actions/workflows/python-package.yml/badge.svg)](https://github.com/long-910/png2gif/actions/workflows/python-package.yml)
 
 This Python script converts a series of PNG images into a GIF animation.
@@ -8,23 +9,59 @@ This Python script converts a series of PNG images into a GIF animation.
 - Python 3.x
 - Pillow library (`pip install pillow`)
 
+## Installation
+
+You can install the package using pip:
+
+```bash
+pip install .
+```
+
 ## Usage
 
-```
-python png_to_gif_converter.py input_path [--output_filename OUTPUT_FILENAME] [--frame_rate FRAME_RATE]
+### Command Line Interface
+
+After installation, you can use the command line interface (CLI) to convert PNG images to GIF.
+
+```bash
+png_to_gif_converter input_path output_filename --frame_rate 10
 ```
 
 - `input_path`: Path to the directory containing PNG images.
-- `--output_filename`: (Optional) Filename for the output GIF. If not provided, the default filename will be based on the input directory name.
-- `--frame_rate`: (Optional) Frame rate for the GIF animation. Default is 10 FPS.
+- `output_filename`: Name of the output GIF file.
+- `--frame_rate`: Frame rate of the output GIF (default: 10 FPS).
 
-## Example
+### Direct Execution
 
+You can also execute the package directly without installation:
+
+```bash
+python -m png_to_gif_converter input_path output_filename --frame_rate 10
 ```
-python png_to_gif_converter.py images/ --output_filename animation.gif --frame_rate 15
+
+### Module Usage
+
+If you prefer to use the package as a module in your Python code:
+
+```python
+from png_to_gif_converter import create_gif
+
+input_path = "path/to/input_directory"
+output_filename = "output.gif"
+frame_rate = 10
+
+create_gif(input_path, output_filename, frame_rate)
 ```
 
-This command will convert all PNG images in the `images/` directory into a GIF animation named `animation.gif` with a frame rate of 15 FPS.
+## Development
+
+### Running Tests
+
+```bash
+pytest
+```
+
+You can run the tests using pytest:
 
 ## Contributing
 
