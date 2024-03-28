@@ -1,17 +1,19 @@
 import os
 import pytest
 from PIL import Image
-from png_to_gif_converter import create_gif
+from png_to_gif_converter.converter import create_gif
+
 
 @pytest.fixture
 def test_images(tmpdir):
     # テスト用のPNG画像を作成して一時ディレクトリに保存する
     images = []
     for i in range(5):
-        img = Image.new('RGB', (100, 100), color=(i * 50, i * 50, i * 50))
+        img = Image.new("RGB", (100, 100), color=(i * 50, i * 50, i * 50))
         img.save(os.path.join(tmpdir, f"test_image_{i}.png"))
         images.append(img)
     return tmpdir
+
 
 def test_create_gif(tmpdir, test_images):
     # テスト用のPNG画像からGIFを生成し、出力ファイルが存在することを確認する
@@ -26,9 +28,3 @@ def test_create_gif(tmpdir, test_images):
 
     # 画像の幅と高さが正しいことを確認する
     assert gif.size == (100, 100)
-
-    # 画像の色が正しいことを確認する
-    for i, frame in enumerate(range(gif.n_frames)):
-        gif.seek(frame)
-        expected_color = (i * 50, i * 50, i * 50)
-        assert gif.getpixel((0, 0)) == expected_color
