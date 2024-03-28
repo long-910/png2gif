@@ -1,7 +1,7 @@
 import os
 import pytest
 from PIL import Image
-from png_to_gif_converter.converter import create_gif
+from png2gif.converter import create_gif
 
 
 @pytest.fixture
